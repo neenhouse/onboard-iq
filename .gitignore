@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+.wrangler/
+
+# Environment
+.env
+.env.local
+.env.*.local
+.dev.vars
+*.local
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*.sw?
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test coverage
+coverage/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+
+# Visual Studio
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

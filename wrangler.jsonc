@@ -1,0 +1,38 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "onboard-iq",
+  "compatibility_date": "2025-03-15",
+  "main": "worker/index.ts",
+
+  // Static assets served from Vite build output
+  "assets": {
+    "directory": "dist"
+  },
+
+  // Environment-specific overrides
+  "env": {
+    "staging": {
+      "name": "onboard-iq-staging"
+    },
+    "production": {
+      "name": "onboard-iq"
+    }
+  },
+
+  // KV namespace for checklists, user progress, mentor assignments
+  // Uncomment and bind after creating namespaces:
+  // "kv_namespaces": [
+  //   { "binding": "CHECKLISTS", "id": "<KV_NAMESPACE_ID>" },
+  //   { "binding": "USER_PROGRESS", "id": "<KV_NAMESPACE_ID>" }
+  // ],
+
+  // D1 database for structured data (users, milestones, quiz results)
+  // Uncomment after creating database:
+  // "d1_databases": [
+  //   { "binding": "DB", "database_name": "onboard-iq", "database_id": "<D1_DATABASE_ID>" }
+  // ],
+
+  "observability": {
+    "enabled": true
+  }
+}
