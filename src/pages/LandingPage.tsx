@@ -95,6 +95,7 @@ const pricingTiers = [
 export default function LandingPage() {
   return (
     <div className="landing">
+      <a href="#main-content" className="skip-to-content">Skip to content</a>
       {/* Nav */}
       <nav className="landing-nav">
         <div className="landing-logo">
@@ -115,7 +116,7 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero */}
-      <header className="hero">
+      <header id="main-content" className="hero">
         <h1>Onboard engineers in weeks, not months</h1>
         <p className="tagline">
           Structured, measurable, and personalized onboarding for engineering

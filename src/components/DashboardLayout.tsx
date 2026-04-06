@@ -14,6 +14,7 @@ const navItems = [
 export default function DashboardLayout() {
   return (
     <div className="app-layout">
+      <a href="#main-content" className="skip-to-content">Skip to content</a>
       <aside className="sidebar">
         <div className="sidebar-brand">
           <div className="sidebar-brand-icon">OQ</div>
@@ -34,7 +35,7 @@ export default function DashboardLayout() {
           ))}
         </ul>
       </aside>
-      <main className="main-content">
+      <main id="main-content" className="main-content">
         <Outlet />
       </main>
     </div>

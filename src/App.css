@@ -59,11 +59,29 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
   font-family: var(--font-body);
   background: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -82,12 +100,37 @@ a:hover {
   color: var(--color-primary-hover);
 }
 
+/* ---- Focus ring ---- */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ---- Skip to content ---- */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.1s ease;
+}
+
+.skip-to-content:focus {
+  top: 1rem;
+}
+
 /* ---- Loading fallback ---- */
 .loading {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 100dvh;
   font-size: 1.25rem;
   color: var(--color-text-muted);
 }
@@ -97,7 +140,7 @@ a:hover {
    ============================================================ */
 .app-layout {
   display: flex;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 /* ---- Sidebar ---- */
@@ -197,7 +240,7 @@ a:hover {
   flex: 1;
   margin-left: 260px;
   padding: 2rem 2.5rem;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 /* ---- Page header ---- */
