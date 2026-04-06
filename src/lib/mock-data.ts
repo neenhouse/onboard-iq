@@ -254,7 +254,7 @@ export const walkthroughStops: Record<string, WalkthroughStop[]> = {
       title: "Router and Layout Shell",
       explanation: "The App component sets up React Router with lazy-loaded routes. Each page is code-split to keep the initial bundle small.",
       whyItMatters: "All new pages go through this router. When adding a feature, you register its route here first.",
-      codeSnippet: `const Dashboard = lazy(() => import('./pages/Dashboard'))\n\n<BrowserRouter>\n  <Suspense fallback={<Loading />}>\n    <Routes>\n      <Route path=\"/\" element={<Landing />} />\n      <Route path=\"/dashboard\" element={<Dashboard />} />\n    </Routes>\n  </Suspense>\n</BrowserRouter>`,
+      codeSnippet: `const Dashboard = lazy(() => import('./pages/Dashboard'))\n\n<BrowserRouter>\n  <Suspense fallback={<Loading />}>\n    <Routes>\n      <Route path="/" element={<Landing />} />\n      <Route path="/dashboard" element={<Dashboard />} />\n    </Routes>\n  </Suspense>\n</BrowserRouter>`,
     },
     {
       id: 3,
@@ -355,7 +355,7 @@ export const walkthroughStops: Record<string, WalkthroughStop[]> = {
     {
       id: 5, path: "src/components/", title: "Component Library",
       explanation: "Shared UI components with co-located tests.", whyItMatters: "Consistent UI across all features.",
-      codeSnippet: `export function Card({ children }) { return <div className=\"card\">{children}</div> }`,
+      codeSnippet: `export function Card({ children }) { return <div className="card">{children}</div> }`,
     },
     {
       id: 6, path: "migrations/", title: "Database Schema",
