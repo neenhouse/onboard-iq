@@ -141,7 +141,10 @@ export default function LandingPage() {
           </div>
         </div>
         <div className="hero-image-pane" aria-hidden="true">
-          <img src="/hero-og.webp" alt="" loading="eager" />
+          <video autoPlay muted loop playsInline poster="/hero-og.webp" style={{width:'100%',height:'100%',objectFit:'cover'}}>
+            <source src="/hero-og.webm" type="video/webm" />
+            <source src="/hero-og.mp4" type="video/mp4" />
+          </video>
           <div className="hero-image-warmth" />
         </div>
       </header>
