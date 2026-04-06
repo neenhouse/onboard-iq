@@ -1,14 +1,14 @@
 import { NavLink, Outlet } from "react-router-dom";
 
 const navItems = [
-  { to: "/dashboard", label: "Overview", icon: "OV", end: true },
-  { to: "/dashboard/checklists", label: "Checklists", icon: "CL" },
-  { to: "/dashboard/walkthrough", label: "Walkthrough", icon: "CW" },
-  { to: "/dashboard/access", label: "Access", icon: "AP" },
-  { to: "/dashboard/mentors", label: "Mentors", icon: "MM" },
-  { to: "/dashboard/milestones", label: "Milestones", icon: "MT" },
-  { to: "/dashboard/quizzes", label: "Quizzes", icon: "KQ" },
-  { to: "/dashboard/productivity", label: "Productivity", icon: "TD" },
+  { to: "/dashboard", label: "Overview", icon: "⊞", end: true },
+  { to: "/dashboard/checklists", label: "Checklists", icon: "✓" },
+  { to: "/dashboard/walkthrough", label: "Walkthrough", icon: "⇢" },
+  { to: "/dashboard/access", label: "Access", icon: "⊙" },
+  { to: "/dashboard/mentors", label: "Mentors", icon: "⇌" },
+  { to: "/dashboard/milestones", label: "Milestones", icon: "◎" },
+  { to: "/dashboard/quizzes", label: "Quizzes", icon: "?" },
+  { to: "/dashboard/productivity", label: "Productivity", icon: "↑" },
 ];
 
 export default function DashboardLayout() {

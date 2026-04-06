@@ -5,43 +5,43 @@ const features = [
     title: "Role-Based Checklists",
     description:
       "Dynamic task lists that adapt to role, seniority, team, and tech stack.",
-    icon: "CL",
+    icon: "✅",
   },
   {
     title: "Codebase Walkthroughs",
     description:
       "Guided tours of relevant repositories with architecture context.",
-    icon: "CW",
+    icon: "🗂️",
   },
   {
     title: "Access Provisioning",
     description:
       "Track every tool and system access request from pending to granted.",
-    icon: "AP",
+    icon: "🔑",
   },
   {
     title: "Mentor Matching",
     description:
       "Algorithm-driven pairing based on skills, availability, and proximity.",
-    icon: "MM",
+    icon: "🤝",
   },
   {
     title: "30/60/90 Milestones",
     description:
       "Structured checkpoints with clear success criteria and progress tracking.",
-    icon: "MT",
+    icon: "🎯",
   },
   {
     title: "Knowledge Quizzes",
     description:
       "Validate understanding at each phase with auto-graded assessments.",
-    icon: "KQ",
+    icon: "📝",
   },
   {
     title: "Productivity Dashboard",
     description:
       "Time-to-first-commit, checklist completion rates, and trend analysis.",
-    icon: "TD",
+    icon: "📈",
   },
 ];
 
@@ -149,24 +149,7 @@ export default function LandingPage() {
         <div className="feature-grid">
           {features.map((feature) => (
             <div key={feature.title} className="feature-card">
-              <span className="feature-icon">
-                <span
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: 36,
-                    height: 36,
-                    borderRadius: 8,
-                    background: "var(--color-primary-muted)",
-                    color: "var(--color-primary)",
-                    fontWeight: 700,
-                    fontSize: "0.8rem",
-                  }}
-                >
-                  {feature.icon}
-                </span>
-              </span>
+              <span className="feature-icon">{feature.icon}</span>
               <h3>{feature.title}</h3>
               <p>{feature.description}</p>
             </div>
