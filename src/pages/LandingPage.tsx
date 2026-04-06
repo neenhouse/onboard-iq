@@ -116,27 +116,33 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero */}
-      <header id="main-content" className="hero">
-        <h1>Onboard engineers in weeks, not months</h1>
-        <p className="tagline">
-          Structured, measurable, and personalized onboarding for engineering
-          teams.
-        </p>
-        <p className="subtitle">
-          Role-based checklists, codebase walkthroughs, mentor matching, and
-          real-time productivity metrics -- all in one platform.
-        </p>
-        <div className="hero-buttons">
-          <Link to="/dashboard">
-            <button className="cta-button" type="button">
-              Get Started
-            </button>
-          </Link>
-          <a href="#features">
-            <button className="cta-button-secondary" type="button">
-              See Features
-            </button>
-          </a>
+      <header id="main-content" className="hero hero-split">
+        <div className="hero-content">
+          <h1>Onboard engineers in weeks, not months</h1>
+          <p className="tagline">
+            Structured, measurable, and personalized onboarding for engineering
+            teams.
+          </p>
+          <p className="subtitle">
+            Role-based checklists, codebase walkthroughs, mentor matching, and
+            real-time productivity metrics -- all in one platform.
+          </p>
+          <div className="hero-buttons">
+            <Link to="/dashboard">
+              <button className="cta-button" type="button">
+                Get Started
+              </button>
+            </Link>
+            <a href="#features">
+              <button className="cta-button-secondary" type="button">
+                See Features
+              </button>
+            </a>
+          </div>
+        </div>
+        <div className="hero-image-pane" aria-hidden="true">
+          <img src="/hero-og.webp" alt="" loading="eager" />
+          <div className="hero-image-warmth" />
         </div>
       </header>
 
